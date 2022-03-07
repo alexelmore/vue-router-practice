@@ -1,7 +1,19 @@
 {
   "jobs": [
-    { "title": "Senior UX Designer", "id": 1, "details": "lorem" },
-    { "title": "Senior Web Developer", "id": 2, "details": "lorem" },
-    { "title": "Senior Vue Developer", "id": 3, "details": "lorem" }
+    {
+      "title": "Senior UX Designer",
+      "id": 1,
+      "details": "Design large scale pages using tools like PhotoShop"
+    },
+    {
+      "title": "Senior Web Developer",
+      "id": 2,
+      "details": "Develop frontend components using JavaScript, CSS and HTML5 "
+    },
+    {
+      "title": "Senior Vue Developer",
+      "id": 3,
+      "details": "Develop and maintain components using Vue.js"
+    }
   ]
 }

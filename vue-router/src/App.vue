@@ -57,4 +57,7 @@ button {
   border: none;
   border-radius: 4px;
 }
+button:hover {
+  cursor: pointer;
+}
 </style>

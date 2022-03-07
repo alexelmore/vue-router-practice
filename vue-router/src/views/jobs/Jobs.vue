@@ -11,12 +11,25 @@
 export default {
   data() {
     return {
-      jobs: [
-        { title: "Senior UX Designer", id: 1, details: "lorem" },
-        { title: "Senior Web Developer", id: 2, details: "lorem" },
-        { title: "Senior Vue Developer", id: 3, details: "lorem" },
-      ],
+      jobs: [],
     };
+  },
+  // Use mounted lifecycle hook to send out a GET fetch request as soon as our component has mounted the DOM
+  mounted() {
+    // Setup a fetch request to our local db.json file for the job listings
+    const url = `http://localhost:3000/jobs`;
+    fetch(url)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        // Init our jobs data property with the data that gets returned.
+        this.jobs = data;
+      })
+      // Catch and log any errors to the console.
+      .catch((error) => {
+        console.log(error.message);
+      });
   },
 };
 </script>
